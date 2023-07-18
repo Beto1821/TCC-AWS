@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+body {
+  font-family: 'Playfair Display', 'Gill Sans';
+  animation: Animation 10s ease infinite;
+  background: linear-gradient(45deg, #21bec6, #5494a0, #3a5e91, #b355ae, #892f78);
+  background-size: 200% 200%;
+  text-align: center;
+}
+
+@keyframes Animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1 1 300px;
+  background-color: #030202;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Added object-fit property */
+  flex: 1;
+}
+
+.card-description {
+  margin-top: 10px;
+}
+
+.card-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #07e4e0;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.card-btn:hover {
+  transition: 1s ease-in-out;
+  background: #4F95DA;
+}
+
+.card-btn:hover svg {
+  stroke-dashoffset: -480;
+}
+
+.footer {
+  padding: 20px 20px;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.header {
+  height: 80vh;
+  width: 100vw;
+  background-image: url('/imagens/Logo.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+  padding:  0 12px;
+  position: relative;
+}
+
+.error-message {
+    font-size: 120px; /* Aumentar o tamanho do texto "ERROR" */
+    color: #fff;
+    animation: fadeAnimation 6s ease infinite;
+    opacity: 1;
+    transition: opacity 3s ease-in-out;
+  }
+  
+  @keyframes fadeAnimation {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
